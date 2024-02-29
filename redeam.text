@@ -1,0 +1,186 @@
+
+21 de Fev de 2024 - Recebido do docente Mohammad, estava eng. Bento e eng. Vasco.
+---------------------------------------------------------------------------------
+
+DAVID - 8471499531 / 875016130
+
+Meu Tio Management System
+
+1. Gestao de Stock
+2. Gestao de HR
+3. Exit
+
+===================================================
+
+Formulario de
+
+Codigo:	Pk
+Nome:	
+Salario:
+Divida:	
+Perdio a abater:  (mensalmente)
+Faltas:	
+Data de falta:
+
+Casos
+
+-Falta mensal (reset mesnalmente o salario/30 dias)
+-Substruir
+-Impressao do transaccoes de abate de divida e faltas
+
+Modelo de Produtos
+------------------
+
+Codigo:PK
+Descricao:
+Quantidade em stock:
+Preco de compra:
+Preco de venda:
+Lucro:
+Stock entrega:
+Novo stock:
+
+Requisitos funcionais
+---------------------
+
+-Deve permitir a introducao de produtos
+-Deve permitir a alteracao de produtos
+-Deve permitir a impressao da lista dos produtos
+-Data e hora deve estar devidamentes acertada
+-Deve permitir a introducao de produtos
+
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+
+O uso final deve ser em ate telemoveis... Portanto, simplesmente o sistema pode ser WEB.
+
+Linguagem a ser programada: HTML CSS e JavaScript.
+-------------------------------------------------- 
+
+Um sistema de gestão de estoque em JavaScript é uma aplicação desenvolvida usando a linguagem de programação JavaScript para gerenciar o estoque de uma empresa. Geralmente, esse sistema permite aos usuários adicionar novos itens ao estoque, atualizar informações sobre os itens existentes, como quantidade disponível e preço, e também permite a remoção de itens quando necessário. Além disso, pode incluir recursos como geração de relatórios de estoque, rastreamento de vendas e alertas de nível baixo de estoque. Esses sistemas são construídos com frameworks e bibliotecas JavaScript, como Node.js para o backend e React.js ou Angular para o frontend, dependendo das necessidades e preferências do desenvolvedor.
+
+outra opcao: Java web (Servilet)
+--------------------------------
+Em Java para desenvolvimento web, um sistema de gestão de estoque seria desenvolvido utilizando o framework Java EE (Enterprise Edition) ou suas implementações, como o Spring Framework. Aqui está um breve resumo do que poderia envolver:
+
+1. **Backend**: 
+   - Utilizando Java EE, você pode desenvolver a lógica de negócios e a camada de acesso a dados (usando JPA para mapeamento objeto-relacional) em Java.
+   - Com Spring Framework, você pode usar Spring MVC para o controle da aplicação e Spring Data JPA para a camada de persistência de dados.
+   - Ambas as opções permitem a criação de APIs RESTful para manipulação de dados.
+
+2. **Frontend**:
+   - Para o frontend, você pode usar tecnologias como JSP (JavaServer Pages), JSF (JavaServer Faces), ou frameworks JavaScript como Angular, React ou Vue.js.
+   - O frontend seria responsável pela interface do usuário, permitindo a visualização e interação com os dados do estoque.
+
+3. **Banco de Dados**:
+   - O banco de dados pode ser qualquer sistema compatível com Java, como MySQL, PostgreSQL, Oracle, etc. 
+   - Para integração com o Java, é comum usar o JDBC (Java Database Connectivity) ou JPA (Java Persistence API).
+
+4. **Segurança**:
+   - A segurança é uma consideração importante. Você pode implementar autenticação e autorização usando tecnologias como Spring Security ou as APIs de segurança do Java EE.
+
+5. **Funcionalidades**:
+   - As funcionalidades incluiriam CRUD (Create, Read, Update, Delete) para itens de estoque, gerenciamento de usuários, controle de acesso, geração de relatórios, notificações de baixo estoque, entre outros recursos específicos do sistema.
+
+Em resumo, um sistema de gestão de estoque em Java para web envolveria o desenvolvimento de uma aplicação backend robusta, integração com um banco de dados, implementação de uma interface de usuário interativa e segura, e a inclusão de funcionalidades específicas para o gerenciamento eficaz do estoque da empresa.
+
+
+
+================================================================
+Gestao de Recursos Humanos
+==================================================================
+
+"Gestão de HR" parece ser uma abreviação ou um termo incompleto. "HR" frequentemente se refere a "Recursos Humanos" em inglês, e "gestão de HR" provavelmente se refere à "Gestão de Recursos Humanos" em português.
+
+A Gestão de Recursos Humanos é uma área fundamental em qualquer organização que se concentra em recrutar, selecionar, treinar, avaliar e gerenciar os funcionários. Ela abrange uma variedade de processos e atividades, incluindo:
+
+1. **Recrutamento e seleção:** Identificar e atrair candidatos qualificados para preencher as vagas disponíveis na organização.
+
+2. **Treinamento e desenvolvimento:** Proporcionar aos funcionários as habilidades e conhecimentos necessários para desempenhar eficazmente suas funções, bem como promover seu desenvolvimento profissional.
+
+3. **Avaliação de desempenho:** Avaliar o desempenho dos funcionários em relação aos objetivos organizacionais e fornecer feedback para promover o crescimento e a melhoria contínua.
+
+4. **Compensação e benefícios:** Gerenciar salários, benefícios e outras formas de remuneração para garantir a equidade e a competitividade no mercado.
+
+5. **Gestão de talentos:** Identificar e desenvolver talentos dentro da organização, além de planejar a sucessão para garantir uma força de trabalho robusta no futuro.
+
+6. **Gestão de relações trabalhistas:** Lidar com questões relacionadas aos contratos de trabalho, negociações sindicais, conformidade regulatória e resolução de conflitos entre funcionários e a organização.
+
+Em resumo, a Gestão de Recursos Humanos desempenha um papel crucial na maximização do potencial humano dentro de uma organização, garantindo que as necessidades dos funcionários sejam atendidas e que a empresa possa alcançar seus objetivos de forma eficaz.
+
+
+===========
+Exit
+============
+
+"Exit" é uma palavra em inglês que significa "saída". Em diferentes contextos, pode ter significados variados:
+
+1. **Saída física:** Em locais como edifícios, estradas, salas, etc., "exit" é frequentemente usado para indicar uma saída ou saída de emergência.
+
+2. **Término de uma situação ou relação:** Em um contexto mais amplo, "exit" pode se referir ao ato de sair de uma situação, relação ou compromisso. Por exemplo, "exit strategy" é uma estratégia planejada para sair de uma situação, como um investimento ou um negócio.
+
+3. **No contexto de programação:** "exit" é uma instrução comum em muitas linguagens de programação para encerrar a execução de um programa ou de uma função.
+
+4. **No contexto de negócios e finanças:** "exit" pode ser usado para se referir a sair de um investimento ou de uma posição em um mercado. Por exemplo, em capital de risco, um "exit" bem-sucedido ocorre quando a empresa é vendida ou aberta para o público, permitindo que os investidores realizem seus ganhos.
+
+Sem mais contexto específico, é difícil fornecer um significado mais preciso. Se você tiver um contexto específico em mente, posso oferecer uma definição mais direcionada.
+
+
+==================================================================================
+Os possiveis requisitos funcionais para elaboracao de um sistema Gestao de estoque.
+====================================================================================
+
+Para a elaboração de um sistema de gestão de estoque, os requisitos funcionais são as funcionalidades que o sistema deve oferecer para atender às necessidades dos usuários e garantir um gerenciamento eficaz do estoque. Aqui estão alguns possíveis requisitos funcionais para um sistema de gestão de estoque:
+
+1. **Cadastro de produtos:** Permitir o cadastro de novos produtos no sistema, incluindo informações como nome, descrição, código de barras, categoria, preço, quantidade em estoque, fornecedor, etc.
+
+2. **Atualização de produtos:** Possibilitar a atualização das informações dos produtos cadastrados, como preço, quantidade em estoque, fornecedor, etc.
+
+3. **Consulta de estoque:** Permitir a consulta rápida e fácil do estoque atual de produtos, mostrando a quantidade disponível de cada item.
+
+4. **Registro de entradas e saídas:** Registrar as entradas (compras, transferências) e saídas (vendas, transferências, perdas) de produtos do estoque, atualizando automaticamente as quantidades disponíveis.
+
+5. **Controle de lote e validade:** Permitir o rastreamento e controle dos produtos por lote e data de validade, alertando quando os produtos estiverem próximos da expiração.
+
+6. **Alertas de estoque mínimo:** Gerar alertas quando a quantidade de um produto atingir um nível mínimo pré-definido, para que os responsáveis possam realizar novos pedidos ou tomar medidas para repor o estoque.
+
+7. **Geração de relatórios:** Permitir a geração de relatórios detalhados sobre o estoque, como inventário atual, histórico de movimentações, produtos mais vendidos, produtos com maior rotatividade, etc.
+
+8. **Gestão de fornecedores:** Manter um cadastro de fornecedores e suas informações de contato, facilitando o processo de compra e reposição de estoque.
+
+9. **Controle de acesso e permissões:** Garantir que apenas usuários autorizados tenham acesso às funcionalidades do sistema de acordo com suas funções e responsabilidades na organização.
+
+10. **Integração com sistemas de vendas:** Possibilitar a integração com sistemas de vendas para atualização automática do estoque após cada venda realizada.
+
+Esses são apenas alguns exemplos de requisitos funcionais comuns em um sistema de gestão de estoque. A lista pode variar dependendo das necessidades específicas da empresa ou do tipo de negócio.
+
+===================================================================================
+Os possiveis requisitos funcionais para elaboracao de um sistema Gestao de HR.
+===================================================================================
+
+Para um sistema de gestão de recursos humanos (HR), os requisitos funcionais são as funcionalidades que o sistema deve fornecer para auxiliar na gestão eficaz dos recursos humanos de uma organização. Aqui estão alguns possíveis requisitos funcionais para um sistema de gestão de HR:
+
+1. **Cadastro de funcionários:** Permitir o cadastro de novos funcionários no sistema, incluindo informações como nome, endereço, dados de contato, cargo, departamento, data de admissão, dados bancários, etc.
+
+2. **Gerenciamento de perfis de funcionários:** Permitir a criação e manutenção de perfis de funcionários, incluindo histórico de emprego, qualificações, habilidades, certificações, avaliações de desempenho, etc.
+
+3. **Registro de dados pessoais e documentos:** Armazenar informações pessoais dos funcionários, como número de identificação, estado civil, dependentes, bem como documentos importantes, como cópias de documentos de identidade, certificados educacionais, etc.
+
+4. **Gestão de horários e presença:** Permitir o registro de horas trabalhadas, controle de presença (horários de entrada e saída), gerenciamento de turnos, folgas, férias, licenças médicas, entre outros.
+
+5. **Processo de recrutamento e seleção:** Apoiar o processo de recrutamento e seleção de novos funcionários, incluindo o gerenciamento de currículos, agendamento de entrevistas, acompanhamento do status do processo seletivo, etc.
+
+6. **Treinamento e desenvolvimento:** Registrar e gerenciar programas de treinamento e desenvolvimento para os funcionários, incluindo inscrições, acompanhamento de progresso, avaliações de desempenho relacionadas ao treinamento, etc.
+
+7. **Avaliação de desempenho:** Facilitar o processo de avaliação de desempenho dos funcionários, incluindo a definição de metas, feedbacks regulares, avaliações formais periódicas, etc.
+
+8. **Administração de benefícios:** Gerenciar benefícios oferecidos aos funcionários, como planos de saúde, planos de previdência, seguro de vida, vale-alimentação, entre outros, incluindo inscrições, alterações e cancelamentos.
+
+9. **Gestão de remuneração:** Administrar salários e outros tipos de remuneração, incluindo cálculos de folha de pagamento, bônus, comissões, reajustes salariais, entre outros.
+
+10. **Geração de relatórios:** Permitir a geração de relatórios diversos, como relatórios de pessoal, análises de desempenho, relatórios de folha de pagamento, relatórios de ausências, entre outros, para apoiar a tomada de decisão e o cumprimento de requisitos legais.
+
+Esses são apenas alguns exemplos de requisitos funcionais comuns em um sistema de gestão de recursos humanos. A lista pode variar dependendo das necessidades específicas da empresa, das regulamentações locais e da complexidade do ambiente de RH.
+
+===============================================================================================================
