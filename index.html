@@ -112,6 +112,10 @@
           display: none;
         }
       }
+      table td:hover{
+        background: blue;
+        cursor: pointer;
+      }
     </style>
 
     
@@ -199,15 +203,16 @@
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <ul class="navbar-nav flex-grow-1 justify-content-between" >
+        <ul id="menuBTN" class="navbar-nav flex-grow-1 justify-content-between" >
           <li class="nav-item"><a class="nav-link" href="#">
             <svg class="bi" width="24" height="24"><use xlink:href="#MTMSYS"/></svg>
           </a></li>
-          <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" href="#">Inicio</a></li>
-          <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" href="#gestoque">Gerenciamento de estoque</a></li>
-          <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" href="#gvenda">Gerenciamento de venda</a></li>
-          <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" href="#suporte">Suporte</a></li>
-          <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" href="#sair">Sair</a></li>
+          <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" d="inicio" href="#">Inicio</a></li>
+          <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" d="gestoque" href="#gestoque">Estoque</a></li>
+          <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" d="gvenda" href="#gvenda">Venda</a></li>
+          <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" d="grh" href="#grh">Recursos Humano</a></li>
+          <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" d="suporte" href="#suporte">Suporte</a></li>
+          <li class="nav-item" data-bs-dismiss="offcanvas"><a class="nav-link" d="sair" href="#sair">Sair</a></li>
         </ul>
       </div>
     </div>
@@ -215,7 +220,7 @@
 </nav>
 
 <main>
-  <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
+  <div id="inicio" class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
     <div class="col-md-6 p-lg-5 mx-auto my-5">
       <h1 class="display-3 fw-bold">MTMSYS</h1>
       <h3 class="fw-normal text-muted mb-3">Sistema MTM</h3>
@@ -224,16 +229,80 @@
     <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
   </div>
 
+
+  <div id="grh" class="p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
+    <div class="text-bg-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5 text-small text-uppercase">Gerenciamento de Recursos Humanos</h2>
+        <p class="lead"></p>
+      </div>
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: auto;">
+            <table class="table text-white" id="tabela-rh">
+              <thead>
+                <tr>
+                  <th colspan="9">Quantidade de funcionario: <span name="quatidade-funcionario"></span></th>
+                </tr>
+                <tr>
+                  <th>Nome Completo</th>
+                  <th>Sexo</th>
+                  <th>Nascimento</th>
+                  <th>Morada</th>
+                  <th>Telefone</th>
+                  <th>Data contrato</th>
+                  <th>Cargo</th>
+                  <th>Formação Acadêmica</th>
+                  <th>Periodo</th>
+                </tr>
+                <form  id="add-rh-form" class="g-3 needs-validation" novalidate>
+                  <tr>
+                    <th>
+                      <div class="has-validation">
+                        <input type="text" class="form-control" name="nome" required="required">
+                      </div>
+                    </th>
+                    <th><select name="sexo"  class="form-select">
+                      <option value="M">Masculino</option>
+                      <option value="F">Feminino</option>
+                    </select></th>
+                    <th><input type="date" class="form-control" name="nascimento"></th>
+                    <th><input type="text" class="form-control" name="morada"></th>
+                    <th><input type="text" class="form-control" name="telefone"></th>
+                    <th><input type="date" class="form-control" name="contrato"></th>
+                    <th><select name="cargo"  class="form-select">
+                      <option>Admin</option>
+                      <option>Seguranca</option>
+                      <option>Vendedor</option>
+                    </select></th>
+                    <th><input type="text" class="form-control" name="academica"></th>
+                    <th><select name="periodo"  class="form-select">
+                      <option>Diurno</option>
+                      <option>Noturno</option>
+                    </select></th>
+                    <th><button class="btn btn-primary w-100" type="submit">Registar</button></th>
+                  </tr>
+                </form>
+              </thead>
+            </table>
+        </div>
+
+        <tarefa id="rh">
+          <p class="text-uppercase fw-bold border-top border-bottom">Adicionar Item</p>
+          
+        </tarefa>
+      </div>
+    </div>
+  </div>
+
   <div id="gestoque" class="p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
     <div class="text-bg-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
       <div class="my-3 py-3">
         <h2 class="display-5 text-small text-uppercase">Gerenciamento de Estoque</h2>
-        <p class="lead">And an even wittier subheading.</p>
+        <p class="lead"></p>
       </div>
       <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: auto;">
         <div class="text-uppercase fw-bold border-top border-bottom  row">
           <div  class="col">            
-            <span name="quatidade-estoque">0</span>
+            <span name="quatidade-estoque"></span>
           </div>
           <div class="col-auto">
             <select class="text-uppercase form-select" name="tarefa-estoque">
@@ -338,17 +407,17 @@
     <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
       <div class="my-3 p-3">
         <h2 class="display-5 text-small text-uppercase">Gerenciamento de Venda</h2>
-        <p class="lead">And an even wittier subheading.</p>
+        <p class="lead"></p>
       </div>
       <div class="bg-body  shadow-sm mx-auto" style="width: 80%; height: auto;">
         <div class="text-uppercase fw-bold border-top border-bottom  row">
           <div class="col">            
-            <span name="quatidade-venda">90</span>
+            <span name="quatidade-venda"></span>
           </div>
           <div class="col-auto">
             <select class="text-uppercase form-select" name="tarefa-venda">
               <option >Tarefa</option>
-              <option value="pvd">Ponto de venda</option>  
+              <option value="pvd" >Ponto de venda</option>  
               <option value="list-venda">Lista de PVD</option>             
             </select>
           </div>
@@ -359,11 +428,22 @@
           <form class="row g-3 needs-validation" novalidate>
             <div class="col-md-4">
               <span class="input-group-text">Codigo</span>
-              <input type="text" class="form-control" name="quatidade-estoque" required>
+              <div class="dropdown">
+                <input type="text" class="form-control" name="lote-produto-venda" required>
+
+                <button class="btn btn-secondary dropdown-toggle" name="lote-produto-venda" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item active" href="#">Action</a></li>
+                </ul>
+              </div>
+
+
               <div class="valid-feedback">
                 Looks good!
               </div>
             </div>
+
+
             <div class="col-md-12 text-center">
               <a class="btn btn-primary w-100" type="submit">Add</a>
             </div>
@@ -379,16 +459,16 @@
             <option>Identifique</option>
           </select>
           <table class="table text-white" id="tabela-pvd">
-            <thead>
-                <tr>
+            <thead><tr>
                     <th>Nome do pvd</th>
                     <th>Sexo</th>
                     <th>Quatidade</th>
                     <th>Morada</th>
                     <th>Data contrato</th>
+                    <th>Data de nascimento</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody >
             </tbody>
           </table>
         </tarefa>
@@ -400,21 +480,21 @@
     </div>
   </div>
 
-  <div id="suporte" class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+  <div id="suporte" class=" flex-md-equal w-100 my-md-3 ps-md-3">
     <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
       <div class="my-3 p-3">
         <h2 class="display-5 text-small text-uppercase">Suporte</h2>
-        <p class="lead">And an even wittier subheading.</p>
+        <p class="lead"></p>
       </div>
       <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: auto; "></div>
     </div>
   </div>
 
-  <div id="sair" class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+  <div id="sair" class=" flex-md-equal w-100 my-md-3 ps-md-3">
     <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
       <div class="my-3 p-3">
         <h2 class="display-5 text-small text-uppercase">Sair</h2>
-        <p class="lead">And an even wittier subheading.</p>
+        <p class="lead"></p>
       </div>
       <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: auto; ">
 
@@ -445,6 +525,45 @@
   
 
   <!-- Modal -->
+  <div class="modal fade" id="modalLogin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Iniciar sessao - PVD</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="add-LoginPVD-form" class="row g-3 needs-validation" novalidate>
+          <div class="modal-body">
+            <div class="col-md-12">
+              <div class="input-group has-validation">
+                <span class="input-group-text">Nome do vendedor</span>
+                <input type="text" name="nome-vendedor-pvd-log" class="form-control" required>
+                <div class="invalid-feedback">
+                  Por favor insira o nome.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="input-group has-validation">
+                <span class="input-group-text">Senha</span>
+                <input type="password" name="senha-vendedor-pvd-log" class="form-control" >
+                <div class="invalid-feedback">
+                  Por favor insira a senha correta.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary " id="log-pvd">Finalizar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal -->
   <div class="modal fade" id="modalNovoPVD" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -459,16 +578,16 @@
                 <span class="input-group-text">Nome do vendedor</span>
                 <input type="text" name="nome-vendedor-pvd" class="form-select" required>
                 <div class="invalid-feedback">
-                  Please choose a username.
+                  Por favor insira o nome.
                 </div>
               </div>
             </div>
             <div class="col-md-12">
               <div class="input-group has-validation">
                 <span class="input-group-text">Data de nascimento</span>
-                <input type="date" name="date-vendedor-pvd" class="form-select" >
+                <input type="date" name="date-vendedor-pvd" class="form-select" required>
                 <div class="invalid-feedback">
-                  Please choose a username.
+                 Por favor insira a data de nascimento.
                 </div>
               </div>
             </div>
@@ -494,6 +613,15 @@
                 </div>
               </div>
             </div>
+            <div class="col-md-12">
+              <div class="input-group has-validation">
+                <span class="input-group-text">Senha</span>
+                <input type="text" name="senha-vendedor-pvd" class="form-control">
+                <div class="invalid-feedback">
+                  Please choose a username.
+                </div>
+              </div>
+            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
@@ -507,6 +635,69 @@
 </modal>
 
 <script type="text/javascript">
+
+
+
+  let usuario=[
+      {nome:"ubisse",senha:'ubisse',prevelegio:'',permissao:0},
+      {nome:"mtmsys",senha:'mtmsys',prevelegio:'',permissao:1}
+    ];
+    let b=document.createElement('button');
+      b.innerHTML='c'
+      b.setAttribute('type', "button");
+      b.setAttribute('data-bs-toggle', "modal");
+      b.setAttribute('data-bs-target', "#modalLogin");
+
+      // Adiciona o texto "Abrir Modal" dentro do botão
+
+      
+      // Adiciona o botão ao documento
+      document.body.appendChild(b);
+      b.click();
+      if(1==1){
+        b.click();
+      }
+
+
+
+  let listaEstoque = [];
+  let funcionario = [
+    {nome:"mtmsys1",
+    sexo:'M',
+    nascimento:'2001-10-03',
+    morada:'Tambara 2',
+    telefone:'888888888',
+    contrato:'2024-12-3',
+    cargo:'admin',
+    academica:'classe 12',
+    periodo:'manha',
+    dateAt:'2004-12-3',
+    senha:"mtmsys"}
+    ];
+
+  document.querySelector('span[name="quatidade-estoque"]').innerHTML=listaEstoque.length;
+  document.querySelector('span[name="quatidade-venda"]').innerHTML=funcionario.length;
+
+  encapsularDivNoMain("inicio");
+   function encapsularDivNoMain(argument) {
+
+      //click();
+    document.querySelectorAll('main > *').forEach(divMain=>{
+      divMain.style.display="none";
+      document.getElementById(argument).style.display="block";
+    });
+  }
+
+
+  document.querySelectorAll('a').forEach(function(button) {
+    button.addEventListener('click', function() {
+      encapsularDivNoMain(button.getAttribute('d'));
+      if(button.getAttribute('d')=='grh'){
+         exibirNaTabela('rh');
+
+      }
+    });
+  });
 
     //
   // Obtém a data de hoje
@@ -526,6 +717,7 @@
     document.querySelectorAll('tarefa').forEach(tarefa=>{
       tarefa.style.display="none";
     });
+
     document.getElementById(this.value).style.display="block";
 
 
@@ -541,29 +733,57 @@
     });
     document.getElementById(this.value).style.display="block";
     exibirNaTabela(this.value);
+
+    if (this.value == 'pvd') {
+      document.getElementById(this.value).style.display="none";
+
+      var button = document.createElement('button');
+
+      button.setAttribute('type', "button");
+      button.setAttribute('data-bs-toggle', "modal");
+      button.setAttribute('data-bs-target', "#modalLogin");
+
+      // Adiciona o texto "Abrir Modal" dentro do botão
+
+      // Adiciona o botão ao documento
+      document.body.appendChild(button);
+      button.click();
+      button.parentNode.removeChild(button);
+    }
      
   }
-  let listaEstoque = [];
-  let listaPVD = [];
-  let tabela = '';
+/*
+  document.querySelector('select[name="tarefa-rh"]').oninput=function(){
+    document.querySelectorAll('tarefa').forEach(tarefa=>{
+      tarefa.style.display="none";
+    });
+    document.getElementById(this.value).style.display="block";
+    exibirNaTabela(this.value);
+    alert(this.value);
+    if (this.value == 'pvd') {
+
+    }
+  }
+  */
 
   function exibirNaTabela(argument){
     if(argument==='list-venda'){
-      tabela = document.getElementById('tabela-pvd');
+      let tabela = document.getElementById('tabela-pvd');
       while (tabela.rows.length > 1) {
           tabela.deleteRow(1);
       }
       // Itera sobre a lista de pessoas
-      listaPVD.forEach(function(pessoa) {
+      funcionario.forEach(function(pessoa) {
       // Cria uma nova linha na tabela
       var row = tabela.insertRow();
 
       // Insere as células para cada atributo da pessoa
       row.insertCell(0).innerHTML = pessoa.nome;
       row.insertCell(1).innerHTML = pessoa.sexo;
-      row.insertCell(2).innerHTML = pessoa.date;
+      row.insertCell(2).innerHTML = pessoa.qtdd;
       row.insertCell(3).innerHTML = pessoa.morada;
-      row.insertCell(4).innerHTML = pessoa.dateAt;
+      row.insertCell(4).innerHTML = pessoa.date;
+      row.insertCell(5).innerHTML = pessoa.dateAt;
       });
 
         // Referenciamos o elemento select
@@ -574,7 +794,7 @@
             listPVDaddEstoque.remove(1); // remove o segundo elemento em diante
         }
         // Iteramos sobre a lista de valores
-        listaPVD.forEach(function(valor) {
+        funcionario.forEach(function(valor) {
           // Criamos um novo elemento option para adicionar ao primeiro select
           var optionAddEstoque = document.createElement("option");
           optionAddEstoque.text = valor.nome;
@@ -589,7 +809,7 @@
         });
      }else if(argument=='list-estoque'){
       // Obtém a referência da tabela
-      tabela = document.getElementById('tabela-estoque');
+      let tabela = document.getElementById('tabela-estoque');
 
       // Remove todas as linhas existentes da tabela
       while (tabela.rows.length > 1) {
@@ -610,6 +830,41 @@
       });
 
 
+     }else if(argument==='rh'){
+        let tabela = document.getElementById('tabela-rh');
+
+        document.querySelector('span[name="quatidade-funcionario"]').innerHTML=funcionario.length;
+          while (tabela.rows.length > 3) {
+          tabela.deleteRow(3);
+        }
+        // Itera sobre a lista de pessoas
+        funcionario.forEach(function(pessoa) {
+        // Cria uma nova linha na tabela
+          var row = tabela.insertRow();
+          row.id=pessoa.nome;
+          // Insere as células para cada atributo da pessoa
+          row.insertCell(0).innerHTML = pessoa.nome;
+          row.insertCell(1).innerHTML = pessoa.sexo;
+          row.insertCell(2).innerHTML = pessoa.nascimento;
+          row.insertCell(3).innerHTML = pessoa.morada;
+          row.insertCell(4).innerHTML = pessoa.telefone;
+          row.insertCell(5).innerHTML = pessoa.contrato;
+          row.insertCell(6).innerHTML = pessoa.cargo;
+          row.insertCell(7).innerHTML = pessoa.academica;
+          row.insertCell(8).innerHTML = pessoa.periodo;
+         // Criar um botão clicável dentro da nova linha
+          var botao = document.createElement("button");
+          botao.textContent = "Mais";
+          botao.id=pessoa.nome;
+
+          botao.addEventListener("click", function() {
+              alert("Você clicou na nova linha!"+botao.id);
+          });
+
+          // Adicionar o botão à célula da nova linha
+          var cell3 = row.insertCell(9);
+          cell3.appendChild(botao);
+        });
      }
   }
 
@@ -630,7 +885,7 @@
 
       // Criamos um novo elemento option para adicionar ao segundo select
       var optionView = document.createElement("option");
-      optionView.text = valor.nomePVD;
+      optionView.text = valor.nome;
 
       // Adicionamos as opções aos selects correspondentes
      // listPVDaddEstoque.add(optionAddEstoque);
@@ -638,11 +893,11 @@
     });
   }
 
-  function addPVD(argument) {
+  function addFuncionario(argument) {
     // body...
-    listaPVD.push(argument);
-    document.querySelector('span[name="quatidade-venda"]').innerHTML=listaPVD.length;
-    exibirNaTabela('list-venda');
+    funcionario.push(argument);
+    document.querySelector('span[name="quatidade-funcionario"]').innerHTML=funcionario.length;
+    exibirNaTabela('rh');
   }
 
   function addEstoque(argument) {
@@ -651,6 +906,40 @@
     document.querySelector('span[name="quatidade-estoque"]').innerHTML=listaEstoque.length;
     exibirNaTabela('list-estoque');
   }
+  function verificarLoginPVD(argument) {
+    if(funcionario.length!=0){
+      funcionario.forEach(function(pvd) {
+        if (argument.nome===pvd.nome && argument.senha===pvd.senha) {
+          document.getElementById('pvd').style.display="block";
+          var log = document.getElementById('log-pvd');
+          log.setAttribute('data-bs-dismiss',"modal");
+          log.click();
+        }else{
+          alert('nao exite')
+        }      
+      });
+    }else{
+      alert("Nao existe algum PVD entao")
+    }
+    
+  }
+
+//====================================================================================================
+//VENDA
+//====================================================================================================
+
+
+document.querySelector('input[name="lote-produto-venda"]').oninput=function(){
+  var button=document.querySelector('button[name="lote-produto-venda"]');
+  button.setAttribute('type',"button");
+  button.setAttribute('data-bs-toggle',"dropdown");
+  button.setAttribute('aria-expanded',"false");
+  button.click();
+  //button.removeAttribute('data-bs-toggle');
+  //button.removeAttribute('aria-expanded');
+};
+
+
 
 
   // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -666,9 +955,10 @@
         if (!form.checkValidity()) {
           event.preventDefault()
           event.stopPropagation()
+          alert(form.id+" Nao esta prechido conforme")
 
         }else{
-          event.preventDefault()
+          event.preventDefault();
           if(form.id=="add-estoque-form"){
             
             var listaEstoqueToAdd={
@@ -682,20 +972,41 @@
             addEstoque(listaEstoqueToAdd);
           }else if (form.id=="add-pvd-form") {
 
-            var listaPVDToAdd={
+            var funcionarioToAdd={
               nome:document.querySelector('input[name="nome-vendedor-pvd"]').value,
               date:document.querySelector('input[name="date-vendedor-pvd"]').value,
               sexo:document.querySelector('#sexo-vendedor-pvd').value,
               morada:document.querySelector('input[name="morada-vendedor-pvd"]').value,
+              senha:document.querySelector('input[name="senha-vendedor-pvd"]').value,
               dateAt:dataFormatada
             };
-            addPVD(listaPVDToAdd);
+            addFuncionario(funcionarioToAdd);
+          }else if (form.id=='add-LoginPVD-form') {
+            var credencial = {
+              nome:document.querySelector('input[name="nome-vendedor-pvd-log"]').value,
+              senha:document.querySelector('input[name="senha-vendedor-pvd-log"]').value
+            };
+            verificarLoginPVD(credencial);
+          }else if(form.id=='add-rh-form'){
+            var funcionario={
+              nome:document.querySelector('input[name="nome"]').value,
+              sexo:document.querySelector('select[name="sexo"]').value,
+              nascimento:document.querySelector('input[name="nascimento"]').value,
+              morada:document.querySelector('input[name="morada"]').value,
+              telefone:document.querySelector('input[name="telefone"]').value,
+              contrato:document.querySelector('input[name="contrato"]').value,
+              cargo:document.querySelector('select[name="cargo"]').value,
+              academica:document.querySelector('input[name="academica"]').value,
+              periodo:document.querySelector('select[name="periodo"]').value,
+              senha:document.querySelector('input[name="telefone"]').value
+            }
+            addFuncionario(funcionario);
           }
         }
         form.classList.add('was-validated')
       }, false)
     })
-  })()
+  })();
 
 </script>
 <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
