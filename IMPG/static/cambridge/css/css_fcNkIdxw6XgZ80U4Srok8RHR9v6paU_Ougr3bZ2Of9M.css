@@ -1,0 +1,25 @@
+#sliding-popup{background:#151515;color:#fcfcfc;width:100%;max-height:100%;-webkit-overflow-scrolling:touch;overscroll-behavior-y:contain;overflow-x:auto;overflow-y:scroll;}#sliding-popup .popup-content{padding:3%;height:auto;}#popup-text{padding:0% 2% 5% 2%;max-width:40%;display:block;}.popup-content .cookie_heading{font-size:1.6em;line-height:2.0em;font-weight:400;}.popup-content .cookie_intro{font-size:1.0em;font-weight:200;}.popup-content .cookie_intro_em{font-weight:600;}#eu-cookie-compliance-categories{padding:3% 2% 4% 2%;display:block;}.eu-cookie-compliance-categories.eu-cookie-compliance-category{padding-top:2%;padding-bottom:2%;overflow:auto;}.sliding-popup-bottom .find-more-button,button[class=eu-cookie-withdraw-tab]{display:inline-block;border:#fcfcfc 2px solid;background:#151515;color:#fcfcfc;padding:5px 10px 5px 10px;text-shadow:none;transition-duration:0.4s;}.sliding-popup-bottom .find-more-button:hover,button[class=eu-cookie-withdraw-tab]:hover{background-color:#000000;}.sliding-popup-bottom .eu-cookie-compliance-save-preferences-button,.eu-cookie-compliance-has-categories .eu-cookie-withdraw-button{display:inline-block;background:#fcfcfc;color:#151515;padding:5px 10px 5px 10px;border:0;text-shadow:none;transition-duration:0.4s;}.sliding-popup-bottom .eu-cookie-compliance-save-preferences-button:hover,.eu-cookie-withdraw-button:hover{background-color:#ffffff;box-shadow:1px 1px 4px 3px #b6b6b6;-webkit-box-shadow:1px 1px 4px 3px #b6b6b6;}.eu-cookie-withdraw-banner #popup-buttons{display:block;float:left;width:80%;}.eu-cookie-compliance-category input[type=checkbox]{float:left;margin-right:7px;}.eu-cookie-compliance-category-description{margin-bottom:14px;}.agree-button{display:none;}.eu-cookie-compliance-has-categories .eu-cookie-withdraw-button{display:none;}
+@media only screen and (max-width:800px){.cam-logo{transition:zoom 1s,margin 1s;zoom:50%;margin:28px 0 0 28px !important;}nav.main-nav{transition:padding 1s;padding:0;}.node-homepage{transition:padding 1s;padding-top:50px !important;}}
+.undergraduate .btn-tertiary:not(:disabled):not(.disabled):focus{box-shadow:0 0 0 0.2rem rgb(38 38 38 / 50%);}.postgraduate .btn-quaternary:not(:disabled):not(.disabled):focus{box-shadow:0 0 0 0.2rem rgb(38 38 38 / 50%);}
+.maintenance-page{background:#85b09a;}
+
+
+            
+            .elemento-para-modile{
+            display: block !important;
+            }
+            .elemento-para-desktop{
+            display: none !important;
+            }
+
+            @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+            .elemento-para-mobile{
+            display: none !important;
+            }
+            .elemento-para-desktop{
+            display: block !important;
+            }
+            }
