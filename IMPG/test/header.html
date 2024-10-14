@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <body>
+
+    	<div th:fragment="header(btn, cabecalho, textoPrincipal)" id="page">
+            <nav class="fh5co-nav" role="navigation">
+                <div class="top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 text-right">
+                                <p class="num text-white">Call: +258 845109383</p>
+                                <ul class="fh5co-social">
+                                    <li><a href="#"><i class="icon-instagram"></i></a></li>
+                                    <li><a href="https://web.facebook.com/InstitutoMedioPolitecnicoGlobo" aria-label="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-menu top-fixed">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <div id="fh5co-logo"><a href="principal">IMPG<span>.</span></a></div>
+                            </div>
+                            <div class="col-xs-11 text-right menu-1 ">
+                                <ul>
+                                    <li class="btn-cta" th:classappend="${btn == 'principal'} ? 'btn-cta-active' : '' " ><a href="principal"><span>Principal</span></a></li>
+                                    <li class="btn-cta" th:classappend="${btn == 'sobre-nos'} ? 'btn-active' : '' " ><a href="sobre-nos"><span>Sobre nos</span></a></li>
+                                    <li class="btn-cta" th:classappend="${btn == 'cursos'} ? 'btn-cta-active' : '' " ><a href="cursos"><span>Cursos</span></a></li>
+                                    <li class="btn-cta" th:classappend="${btn == 'secretariaOnline'} ? 'btn-active' : '' " ><a href="secretaria-online"><span>Secretaria online</span></a></li>
+                                    <li class="has-dropdown" th:classappend="${btn == 'plataformas'} ? 'btn-cta-active' : '' " >
+                                        <a href="#">Plataformas</a>
+                                        <ul class="dropdown">
+                                            <li><a href="#">Esura</a></li>
+                                            <li><a href="#">Moodle</a></li>
+                                            <li><a href="#">Biblioteca</a></li>
+                                            <li><a href="#">Jornadas</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="btn-cta" th:classappend="${btn == 'login'} ? 'btn-cta-active' : '' " ><a href="login"><span>Login</span></a></li>
+                                    <li class="btn-cta " th:classappend="${btn == 'inscricao'} ? 'btn-cta-active' : '' " ><a href="inscricao"><span>Insricao</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </nav>
+
+            <header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_1.jpg);" data-stellar-background-ratio="0.5">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12  text-center">
+                            <div class="display-t">
+                                <div class="display-tc animate-box" data-animate-effect="fadeIn">
+                                    <h1 th:text="${cabecalho}" class="text-white">The Art of Teaching is the Art of Assisting Discovery</h1>
+                                    <div th:if="${btn == 'secretariaOnline'}">
+                                        <a class="btn btn-primary" href="https://wa.me/+258845109383" target="_blank">Whatsapp</a>
+                                    </div>
+                                    <div th:else>
+                                        <h2 th:text="${textoPrincipal}" class="text-white">Free html5 templates Made by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
+                                    </div>
+
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+    </body>
+</html>
